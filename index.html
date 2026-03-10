@@ -122,21 +122,30 @@ img {
 <img src="images/home.gif" style="width: 1184px; height: 666px; left: 380px; top: 414px; position: absolute"/>
 <div class="typed-wrap-desktop"><span id="typed-desktop" class="typed-text"></span><span class="caret"></span></div>
 </div>
-<div class="only-mobile frame" style="width: 100vw; height: 100vh; left: 0; top: 0; position: relative; background: black; overflow: hidden;">
-    
-    <img src="images/string_1_1239x696.png" style="width: 115%; height: auto; left: -7%; top: 28%; position: absolute; z-index: 1;"/>
-    
-    <img src="images/underline_2_1089x613.png" style="width: 100%; height: auto; left: 0; top: 15%; position: absolute; z-index: 1;"/>
-    
-    <img src="images/home.gif" style="width: 146%; height: auto; left: -23%; bottom: 0; position: absolute; z-index: 2;"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <div style="width: 90%; left: 5%; top: 20%; position: absolute; text-align: center; color: white; font-size: 8vw; font-family: 'Finger Paint', cursive; font-weight: 400; word-wrap: break-word; z-index: 3;">
-        WHAT’S THE MATTER?
-        <div class="typed-wrap-mobile">
-            <span id="typed-mobile" class="typed-text"></span>
-            <span class="caret mobile"></span>
-        </div>
+<div class="only-mobile frame" style="width: 100vw; height: 100vh; left: 0px; top: 0px; position: relative; background: black; overflow: hidden;">
+    
+    <!-- เส้น String (ปรับตำแหน่งให้อยู่ช่วงกลางล่างตามสัดส่วนเดิม) -->
+    <img src="images/string_1_1239x696.png" style="width: 114%; height: auto; left: -7.4%; top: 28.6%; position: absolute"/>
+    
+    <!-- เส้น Underline (ใต้ข้อความ) -->
+    <img src="images/underline_2_1089x613.png" style="width: 100%; height: auto; left: -0.4%; top: 15.7%; position: absolute"/>
+    
+    <!-- ตัวละคร GIF (ให้อยู่ขอบล่างพอดี) -->
+    <img src="images/home.gif" style="width: 146%; height: auto; left: -22%; bottom: 0%; position: absolute"/>
+
+    <!-- ส่วนของ Typing Animation (กรอกรหัส) -->
+    <div class="typed-wrap-mobile" style="width: 100%; position: absolute; top: 21%; text-align: center; z-index: 10;">
+        <span id="typed-mobile" class="typed-text" style="color: white; font-size: 8vw; font-family: Finger Paint;"></span>
+        <span class="caret mobile" style="color: white; font-size: 8vw;"></span>
     </div>
+
+    <!-- หัวข้อคำถาม -->
+    <div style="width: 96%; height: auto; left: 2%; top: 21%; position: absolute; text-align: center; color: white; font-size: 7.8vw; font-family: Finger Paint; font-weight: 400; word-wrap: break-word">
+        WHAT’S THE MATTER?
+    </div>
+</div>
     
 </div>
 </section>
