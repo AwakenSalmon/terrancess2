@@ -122,51 +122,87 @@ img {
 <img src="images/home.gif" style="width: 1184px; height: 666px; left: 380px; top: 414px; position: absolute"/>
 <div class="typed-wrap-desktop"><span id="typed-desktop" class="typed-text"></span><span class="caret"></span></div>
 </div>
-<!-- Meta tag สำหรับคุมขนาดจอมือถือ -->
+<!-- อย่าลืมใส่ meta ตัวนี้ไว้ใน <head> นะครับ สำคัญมากสำหรับมือถือ -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<!-- ช่อง Input สำหรับรับค่า (ซ่อนตัวจริงไว้ แต่ให้รับ Focus ได้เหมือน Desktop) -->
-<input id="capture-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="password input" 
-       style="position: absolute; opacity: 0; pointer-events: none;">
-
-<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
-
 <style>
-    /* ตั้งค่าฟอนต์ตามที่คุณระบุ */
-    .vanilla-cream {
-        /* ตรวจสอบชื่อฟอนต์ที่คุณลงไว้ในโปรเจกต์ ถ้าเรียกจากไฟล์เครื่องให้เปลี่ยน path ครับ */
-        font-family: 'Finger Paint', cursive; 
-        color: white;
+    /* เรียกฟอนต์ที่ต้องการ (ถ้ามีไฟล์ในเครื่องให้แก้ path นะครับ) */
+    @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+    .only-mobile.frame {
+        width: 100vw; 
+        height: 100vh; 
+        left: 0px; 
+        top: 0px; 
+        position: relative; 
+        background: black; 
+        overflow: hidden; /* กันรูปส่วนเกินล้นออกข้างจอ */
     }
-    
-    .container-group {
+
+    /* สไตล์สำหรับช่องพิมพ์ (Typed.js) */
+    .typed-wrap-mobile {
         position: absolute;
         width: 100%;
-        top: 35%; /* ปรับขึ้น-ลง ตรงนี้เพื่อขยับทั้งกลุ่มข้อความและเส้น */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
+        top: 22%; /* ปรับให้ขึ้นมาอยู่เหนือเส้น */
+        z-index: 10;
+        color: white;
+        font-family: 'Finger Paint', cursive; /* แก้ฟอนต์ตรงนี้ */
+        font-size: 7vw;
+    }
+
+    /* เส้นสีขาว */
+    .underline-img {
+        width: 100%; 
+        height: auto; 
+        left: 0; 
+        top: 28%; /* ตำแหน่งเส้น */
+        position: absolute;
+    }
+
+    /* ตัวอักษรหัวข้อ */
+    .title-text {
+        width: 100%; 
+        left: 0; 
+        top: 10%; 
+        position: absolute; 
+        text-align: center; 
+        color: white; 
+        font-size: 9vw; 
+        font-family: 'Finger Paint', cursive; 
+        font-weight: 400; 
+        word-wrap: break-word;
+    }
+
+    /* รูปตัวละคร (Gif) */
+    .home-gif {
+        width: 140%; 
+        height: auto; 
+        left: -20%; 
+        bottom: 0; /* ยึดล่างจอ */
+        position: absolute;
     }
 </style>
 
-<div class="only-mobile frame" style="width: 100vw; height: 100vh; position: relative; background: black; overflow: hidden;">
+<div class="only-mobile frame">
+    <!-- 1. หัวข้อ -->
+    <div class="title-text">WHAT’S THE MATTER?</div>
 
-    <div class="container-group">
-        <h2 style="font-size: 8vw; margin-bottom: 2vh;" class="vanilla-cream">WHAT’S THE MATTER?</h2>
-        
-        <div class="typed-wrap-mobile" style="margin-bottom: 1vh; min-height: 40px;">
-            <span id="typed-mobile" class="typed-text vanilla-cream" style="font-size: 7vw;">ike|</span>
-        </div>
-
-        <img src="images/underline_2_1089x613.png" style="width: 80%; height: auto; position: static;">
+    <!-- 2. ช่องพิมพ์ (ย้ายมาไว้ตรงนี้เพื่อให้ลำดับการพิมพ์อยู่เหนือเส้น) -->
+    <div class="typed-wrap-mobile">
+        <span id="typed-mobile" class="typed-text"></span>
+        <span class="caret mobile">|</span>
     </div>
 
-    <img src="images/string_1_1239x696.png" style="width: 110%; position: absolute; top: 45%; left: -5%; z-index: 1;">
+    <!-- 3. เส้นใต้ (วางตำแหน่งให้สอดคล้องกับตัวหนังสือ) -->
+    <img src="images/underline_2_1089x613.png" class="underline-img"/>
 
-    <img src="images/home.gif" style="width: 120%; position: absolute; bottom: 0; left: -10%; z-index: 2;">
+    <!-- 4. เส้นสาย (String) -->
+    <img src="images/string_1_1239x696.png" style="width: 110%; height: auto; left: -5%; top: 35%; position: absolute"/>
 
+    <!-- 5. ตัวละคร -->
+    <img src="images/home.gif" class="home-gif"/>
 </div>
-
 </div>
 
 <style>
