@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who am I</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  min-height: 100%;
+}
+body {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.page { display: none; }
+.page.active { display: block; }
+.frame {
+  margin: 0 auto;
+}
+.only-desktop { display: block; }
+.only-mobile { display: none; }
+@media (max-width: 1100px) {
+  .only-desktop { display: none !important; }
+  .only-mobile { display: block !important; }
+}
+img {
+  display: block;
+  max-width: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+#capture-input {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 1;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+#capture-input.hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+#capture-input::selection {
+  background: transparent;
+  color: transparent;
+}
+.typed-wrap-desktop,
+.typed-wrap-mobile {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  white-space: pre;
+  color: white;
+  pointer-events: none;
+}
+.typed-wrap-desktop {
+  left: 50%;
+  top: 327px;
+  transform: translateX(-50%);
+  height: 74.27px;
+  font-size: 56.27px;
+  font-family: Vanilla Cream Ox;
+  font-weight: 400;
+  line-height: 1;
+}
+.typed-wrap-mobile {
+  left: 50%;
+  top: 632px;
+  transform: translateX(-50%);
+  height: 99px;
+  font-size: 75px;
+  font-family: Vanilla Cream Ox;
+  font-weight: 400;
+  line-height: 1;
+}
+.typed-text {
+  display: inline-block;
+  line-height: 1;
+}
+.caret {
+  display: inline-block;
+  background: #D9D9D9;
+  width: 2.25px;
+  height: 74.27px;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: bottom;
+  flex: 0 0 auto;
+  margin-left: 0;
+}
+.caret.mobile {
+  width: 3px;
+  height: 99px;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.hidden-audio {
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+<input id="capture-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="password input">
+<section id="page-home" class="page active">
+<div class="only-desktop frame" style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: relative; background: black">
+<img src="images/string_1_1920x1079.png" style="width: 1920px; height: 1079px; left: 0px; top: 0px; position: absolute"/>
+<img src="images/underline_1_817x460.png" style="width: 817px; height: 459.89px; left: 564px; top: 79px; position: absolute"/>
+<div style="width: 1229px; height: 332px; left: 358px; top: 117px; position: absolute; text-align: center; color: white; font-size: 100.96px; font-family: Finger Paint; font-weight: 400; word-wrap: break-word">WHAT’S THE MATTER?</div>
+<img src="images/home_1_1184x666.png" style="width: 1184px; height: 666px; left: 380px; top: 414px; position: absolute"/>
+<div class="typed-wrap-desktop"><span id="typed-desktop" class="typed-text"></span><span class="caret"></span></div>
+</div>
+<div class="only-mobile frame" style="width: 1080px; height: 1920px; left: 0px; top: 0px; position: relative; background: black">
+<img src="images/string_1_1239x696.png" style="width: 1239px; height: 696px; left: -80px; top: 550px; position: absolute"/>
+<img src="images/underline_2_1089x613.png" style="width: 1089px; height: 613px; left: -5px; top: 302px; position: absolute"/>
+<img src="images/home_2_1583x890.png" style="width: 1583px; height: 890px; left: -238px; top: 1030px; position: absolute"/>
+<div class="typed-wrap-mobile"><span id="typed-mobile" class="typed-text"></span><span class="caret mobile"></span></div>
+<div style="width: 1037px; height: 280.27px; left: 22px; top: 401px; position: absolute; text-align: center; color: white; font-size: 85.20px; font-family: Finger Paint; font-weight: 400; word-wrap: break-word">WHAT’S THE MATTER?</div>
+</div>
+</section>
+<section id="page-dissapoint" class="page">
+<div class="only-desktop frame" style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: relative; background: black">
+<div style="left: 711px; top: 496px; position: absolute; color: white; font-size: 48px; font-family: Finger Paint; font-weight: 400; word-wrap: break-word">you're   not   wrong.</div>
+<div style="left: 800px; top: 567px; position: absolute; color: white; font-size: 16px; font-family: FF Comma Trial; font-weight: 400; word-wrap: break-word">Go  back   ,  I   already   knew   that.</div>
+</div>
+<div class="only-mobile frame" style="width: 1080px; height: 1920px; left: 0px; top: 0px; position: relative; background: black">
+<div style="left: 230px; top: 835px; position: absolute; color: white; font-size: 64px; font-family: Finger Paint; font-weight: 400; word-wrap: break-word">you're  not  wrong.</div>
+<div style="left: 316px; top: 939px; position: absolute; color: white; font-size: 20px; font-family: FF Comma Trial; font-weight: 400; word-wrap: break-word">Going   back   ,  I   already   knew   that.</div>
+</div>
+</section>
+<section id="page-terrance" class="page">
+<div class="only-desktop frame" style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: relative; background: linear-gradient(0deg, rgba(255, 255, 255, 0.63) 0%, rgba(255, 69.84, 69.84, 0.63) 100%), #FF6969">
+<div style="width: 1042px; left: 439px; top: 216px; position: absolute; text-align: center; color: white; font-size: 64px; font-family: Finger Paint; font-weight: 400; word-wrap: break-word"> THATS  RIGHT , BUDDY!</div>
+<div style="left: 637px; top: 310px; position: absolute; color: white; font-size: 22px; font-family: FF Comma Trial; font-weight: 400; word-wrap: break-word">There's  nothing   here  .   See  you  at   the  camp!</div>
+<img src="images/terrance_2_1231x692.png" style="width: 1231px; height: 692px; left: 356px; top: 388px; position: absolute"/>
+</div>
+<div class="only-mobile frame" style="width: 1080px; height: 1920px; left: 0px; top: 0px; position: relative; background: linear-gradient(180deg, #FF6969 0%, white 100%), #FF6969">
+<div style="width: 1042px; left: 0px; top: 678px; position: absolute; text-align: center; color: white; font-size: 64px; font-family: Finger Paint; font-weight: 400; word-wrap: break-word"> THATS  RIGHT , BUDDY!</div>
+<div style="left: 198px; top: 772px; position: absolute; color: white; font-size: 22px; font-family: FF Comma Trial; font-weight: 400; word-wrap: break-word">There's  nothing   here  .   See  you  at   the  camp!</div>
+<img src="images/terrance_3_1713x963.png" style="width: 1713px; height: 963px; left: -273px; top: 960px; position: absolute"/>
+</div>
+</section>
+<section id="page-my-son" class="page">
+<audio id="audio-my-son" class="hidden-audio" loop playsinline preload="auto"><source src="0_13__Sea Waves - Sound Effect.mp3" type="audio/mpeg"></audio>
+<div class="only-desktop frame" style="width: 1920px; height: 1949px; left: 0px; top: 0px; position: relative; background: black; overflow: hidden">
+<img src="images/ezgif-7d148303c324973e_1_3253x1830.png" style="width: 3253px; height: 1830px; left: -1219px; top: 1045px; position: absolute"/>
+<img src="images/ezgif-7d148303c324973e_2_1920x1080.png" style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: absolute"/>
+<img src="images/pic_878x865.png" style="width: 877.83px; height: 865px; left: 521px; top: 54px; position: absolute"/>
+<div style="left: 888.90px; top: 101.91px; position: absolute; color: white; font-size: 63.73px; font-family: FF Comma Trial; font-weight: 400; word-wrap: break-word">LIAR</div>
+<img src="images/mail_3_525x700.png" style="width: 525.41px; height: 699.60px; left: 70px; top: 1011.27px; position: absolute; transform: rotate(-3deg); transform-origin: top left"/>
+<img src="images/mail_1_675x899.png" style="width: 675.29px; height: 899.17px; left: 425.82px; top: 799px; position: absolute; transform: rotate(20deg); transform-origin: top left"/>
+<img src="images/mail_2_675x899.png" style="width: 675.29px; height: 899.17px; left: 324.82px; top: 820px; position: absolute; transform: rotate(20deg); transform-origin: top left; box-shadow: 0px 4px 50px #3A0A0A"/>
+<img src="images/paper2_646x860.png" style="width: 646.29px; height: 859.73px; left: 1017.70px; top: 897.84px; position: absolute; transform: rotate(12deg); transform-origin: top left; box-shadow: 0px 1px 60px rgba(72.24, 36.45, 18.56, 0.50)"/>
+<img src="images/paper_729x970.png" style="width: 729px; height: 970px; left: 734px; top: 872px; position: absolute; box-shadow: 0px 1px 60px #482413"/>
+<img src="images/maple_1_289x289.png" style="width: 289.05px; height: 289.05px; left: 1174.03px; top: 1509.67px; position: absolute; transform: rotate(12deg); transform-origin: top left"/>
+<div style="width: 367.45px; height: 367.45px; left: 1197.94px; top: 54px; position: absolute; transform: rotate(12deg); transform-origin: top left"></div>
+<div style="left: 862px; top: 1025px; position: absolute; color: black; font-size: 37.06px; font-family: Grape Nuts; font-weight: 400; word-wrap: break-word">To Peter Charles</div>
+<div style="left: 1010px; top: 1703px; position: absolute; color: black; font-size: 34.55px; font-family: Grape Nuts; font-weight: 400; word-wrap: break-word">Ike  Broflovski</div>
+<div style="left: 0px; top: 30px; position: absolute; text-align: center; color: #F6FBFB; font-size: 94.38px; font-family: sa-ard pen; font-weight: 400; mix-blend-mode: multiply; word-wrap: break-word">I don't know what to do without you     I don't know where to put my hands     I've been trying to lay my head down     But I'm writing this at three AM      I don't need the world to see     That I've been the best I can be, but     I don't think I could stand to be     Where you don't see me      On sunny days I go out walking     I end up on a tree-lined street     I look up at the gaps of sunlight     I miss you more than anything      I don't need the world to see     That I've been the best I can be, but     I don't think I could stand to be     Where you don't see me      And autumn comes when you're not yet done     With the summer passing by, but     I don't think I could stand to be     Where you don't see me</div>
+<div style="width: 539px; height: 632px; left: 855px; top: 1080px; position: absolute; color: black; font-size: 16px; font-family: sa-ard pen; font-weight: 400; line-height: 29px; word-wrap: break-word">สวัสดีครับพีซี ผมไอค์เองนะ<br/>ผมพึ่งจะลุกมาเขียนจดหมายได้ ลายมือผมไม่ดีเท่าเมื่อก่อนแล้วเพราะยังไม่ชินกับตาข้างเดียว แต่เอาเถอะ ข้างนอกนี่มันไม่มีตาให้เปลี่ยน<br/><br/>ผมไม่รู้ว่าคุณยังอยู่ไหมในนั้น คนอ่านจะเป็นใครก็ช่าง แต่ถ้าเป็นคุณ หรือใครที่อยากตอบก็ตอบที<br/><br/>ผมจะยังไม่แจ้งตำรวจก็ได้ แต่ขอแค่ติดต่อกลับมาได้ไหม<br/><br/>ตอนนี้สถานการณ์ไม่ดี แย่ มากๆ<br/><br/>พ่อแม่ผมทะเลาะกันแล้วผมก็ไม่กล้าคุยกับพวกเขาเรื่องไคล์ ผมโดนครอบครัวของพี่ทุกคนต่อว่าว่าผมโกหก ข้างนอกนี่ไม่มีใครเชื่อผมเลย<br/><br/>.จริงๆก็มีพี่ชายของพี่ไมเคิล ชื่อพาวเวลล์<br/><br/>ผมกับพี่พาวพยายามหาค่ายแล้ว แต่มันไม่เจอ<br/><br/>ถือว่าผมขอ อย่างน้อยช่วยส่งสัญญาณอะไรกลับมาได้ไหม บอกทีว่าคุณยังอยู่<br/>เจ้านั่นมันชุบคนได้ไม่ใช่หรอ<br/><br/>พีซี ขอร้อง<br/><br/>ผมขอโทษ</div>
+</div>
+<div class="only-mobile frame" style="width: 1080px; height: 2876px; left: 0px; top: 0px; position: relative; background: black; overflow: hidden">
+<img src="images/ezgif-7d148303c324973e_3_3253x1830.png" style="width: 3253px; height: 1830px; left: -1532px; top: 1812px; position: absolute"/>
+<img src="images/ezgif-7d148303c324973e_4_3217x1810.png" style="width: 3217px; height: 1810px; left: -1439px; top: 2px; position: absolute"/>
+<div style="left: 373px; top: 135px; position: absolute; color: white; font-size: 128px; font-family: FF Comma Trial; font-weight: 400; word-wrap: break-word">LIAR</div>
+<img src="images/mail_1_869x1157.png" style="width: 868.91px; height: 1156.98px; left: 151.22px; top: 984px; position: absolute; transform: rotate(20deg); transform-origin: top left"/>
+<img src="images/paper_938x1248.png" style="width: 938px; height: 1248px; left: 118px; top: 1295px; position: absolute; box-shadow: 0px 1px 60px #482413"/>
+<img src="images/Rectangle_929x915.png" style="width: 929px; height: 915px; left: 75px; top: 135px; position: absolute"/>
+<img src="images/maple_3_438x438.png" style="width: 437.81px; height: 437.81px; left: 677.48px; top: 2154px; position: absolute; transform: rotate(12deg); transform-origin: top left"/>
+<div style="left: -91px; top: 185px; position: absolute; text-align: center; color: #F6FBFB; font-size: 63.14px; font-family: sa-ard pen; font-weight: 400; mix-blend-mode: multiply; word-wrap: break-word">I don't know what to do without you     I don't know where to put my hands     I've been trying to lay my head down     But I'm writing this at three AM      I don't need the world to see     That I've been the best I can be, but     I don't think I could stand to be     Where you don't see me      On sunny days I go out walking     I end up on a tree-lined street     I look up at the gaps of sunlight     I miss you more than anything      I don't need the world to see     That I've been the best I can be, but     I don't think I could stand to be     Where you don't see me      And autumn comes when you're not yet done     With the summer passing by, but     I don't think I could stand to be     Where you don't see me</div>
+<div style="width: 698.48px; height: 819px; left: 275px; top: 1502px; position: absolute; color: black; font-size: 20.73px; font-family: sa-ard pen; font-weight: 400; line-height: 37.58px; word-wrap: break-word">สวัสดีครับพีซี ผมไอค์เองนะ<br/>ผมพึ่งจะลุกมาเขียนจดหมายได้ ลายมือผมไม่ดีเท่าเมื่อก่อนแล้วเพราะยังไม่ชินกับตาข้างเดียว แต่เอาเถอะ ข้างนอกนี่มันไม่มีตาให้เปลี่ยน<br/><br/>ผมไม่รู้ว่าคุณยังอยู่ไหมในนั้น คนอ่านจะเป็นใครก็ช่าง แต่ถ้าเป็นคุณ หรือใครที่อยากตอบก็ตอบที<br/><br/>ผมจะยังไม่แจ้งตำรวจก็ได้ แต่ขอแค่ติดต่อกลับมาได้ไหม<br/><br/>ตอนนี้สถานการณ์ไม่ดี แย่ มากๆ<br/><br/>พ่อแม่ผมทะเลาะกันแล้วผมก็ไม่กล้าคุยกับพวกเขาเรื่องไคล์ ผมโดนครอบครัวของพี่ทุกคนต่อว่าว่าผมโกหก ข้างนอกนี่ไม่มีใครเชื่อผมเลย<br/><br/>.จริงๆก็มีพี่ชายของพี่ไมเคิล ชื่อพาวเวลล์<br/><br/>ผมกับพี่พาวพยายามหาค่ายแล้ว แต่มันไม่เจอ<br/><br/>ถือว่าผมขอ อย่างน้อยช่วยส่งสัญญาณอะไรกลับมาได้ไหม บอกทีว่าคุณยังอยู่<br/>เจ้านั่นมันชุบคนได้ไม่ใช่หรอ<br/><br/>พีซี ขอร้อง<br/><br/>ผมขอโทษ</div>
+<div style="left: 275px; top: 1438px; position: absolute; color: black; font-size: 37.06px; font-family: Grape Nuts; font-weight: 400; word-wrap: break-word">To Peter Charles</div>
+<div style="left: 507px; top: 2367px; position: absolute; color: black; font-size: 34.55px; font-family: Grape Nuts; font-weight: 400; word-wrap: break-word">Ike  Broflovski</div>
+</div>
+</section>
+<section id="page-my-brother" class="page">
+<audio id="audio-my-brother" class="hidden-audio" loop playsinline preload="auto"><source src="0_122__Adrianne Lenker - half return (Lyrics).mp3" type="audio/mpeg"></audio>
+<div class="only-desktop frame" style="width: 1920px; height: 2387px; left: 0px; top: 0px; position: relative; background: black; overflow: hidden">
+<img src="images/my_brother_1_1920x2387.png" style="width: 1920px; height: 2387px; left: 0px; top: 0px; position: absolute"/>
+</div>
+<div class="only-mobile frame" style="width: 1080px; height: 2387px; left: 0px; top: 0px; position: relative; background: black; overflow: hidden">
+<img src="images/my_brother_phone_1_1080x2387.png" style="width: 1080px; height: 2387px; left: 0px; top: 0px; position: absolute"/>
+</div>
+</section>
+<script>
+(function () {
+  const input = document.getElementById('capture-input');
+  const typedDesktop = document.getElementById('typed-desktop');
+  const typedMobile = document.getElementById('typed-mobile');
+  const pages = Array.from(document.querySelectorAll('.page'));
+  const audioMySon = document.getElementById('audio-my-son');
+  const audioMyBrother = document.getElementById('audio-my-brother');
+
+  function syncText() {
+    if (typedDesktop) typedDesktop.textContent = input.value;
+    if (typedMobile) typedMobile.textContent = input.value;
+  }
+
+  function resetInput() {
+    input.value = '';
+    syncText();
+  }
+
+  function stopAllAudio() {
+    [audioMySon, audioMyBrother].forEach((audio) => {
+      if (!audio) return;
+      audio.pause();
+      try { audio.currentTime = 0; } catch (e) {}
+    });
+  }
+
+  function showPage(pageId) {
+    pages.forEach((page) => page.classList.remove('active'));
+    const next = document.getElementById('page-' + pageId);
+    if (next) next.classList.add('active');
+
+    if (pageId === 'home') {
+      input.classList.remove('hidden');
+      setTimeout(() => input.focus(), 0);
+    } else {
+      input.classList.add('hidden');
+      input.blur();
+    }
+
+    stopAllAudio();
+    if (pageId === 'my-son' && audioMySon) {
+      audioMySon.play().catch(() => {});
+    }
+    if (pageId === 'my-brother' && audioMyBrother) {
+      audioMyBrother.play().catch(() => {});
+    }
+  }
+
+  function submitPassword(raw) {
+    const t = raw.trim().toLowerCase();
+
+    if (t === 'dissapoint') return showPage('dissapoint');
+    if (t === 'terrance') return showPage('terrance');
+    if (t === 'my son') return showPage('my-son');
+    if (t === 'my brother') return showPage('my-brother');
+    if (t === 'ike' || t === 'broflovski') {
+      window.location.href = 'https://docs.google.com/document/d/1fsHWACzmm4uS2Be1ejiab6j9WYFdqF53GpNNEUgYiLI/edit?usp=sharing';
+      return;
+    }
+    resetInput();
+  }
+
+  input.addEventListener('input', syncText);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      submitPassword(input.value);
+    }
+  });
+
+  document.addEventListener('click', function () {
+    if (document.getElementById('page-home').classList.contains('active')) {
+      input.focus();
+    }
+  });
+
+  window.addEventListener('load', function () {
+    input.focus();
+    syncText();
+    showPage('home');
+  });
+})();
+</script>
+</body>
+</html>
