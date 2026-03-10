@@ -129,28 +129,43 @@ img {
 <input id="capture-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="password input" 
        style="position: absolute; opacity: 0; pointer-events: none;">
 
+<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+
+<style>
+    /* ตั้งค่าฟอนต์ตามที่คุณระบุ */
+    .vanilla-cream {
+        /* ตรวจสอบชื่อฟอนต์ที่คุณลงไว้ในโปรเจกต์ ถ้าเรียกจากไฟล์เครื่องให้เปลี่ยน path ครับ */
+        font-family: 'Finger Paint', cursive; 
+        color: white;
+    }
+    
+    .container-group {
+        position: absolute;
+        width: 100%;
+        top: 35%; /* ปรับขึ้น-ลง ตรงนี้เพื่อขยับทั้งกลุ่มข้อความและเส้น */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
 <div class="only-mobile frame" style="width: 100vw; height: 100vh; position: relative; background: black; overflow: hidden;">
-    
-    <!-- 1. เส้น String (พื้นหลัง) -->
-    <img src="images/string_1_1239x696.png" style="width: 115%; height: auto; left: -7%; top: 25%; position: absolute; z-index: 1;"/>
-    
-    <!-- 2. เส้น Underline (จุดที่จะให้ตัวหนังสือไปโผล่ข้างบน) -->
-    <img src="images/underline_2_1089x613.png" style="width: 100%; height: auto; left: 0; top: 12%; position: absolute; z-index: 2;"/>
-    
-    <!-- 3. หัวข้อคำถาม -->
-    <div style="width: 100%; left: 0; top: 18%; position: absolute; text-align: center; color: white; font-size: 8vw; font-family: 'Finger Paint'; z-index: 3;">
-        WHAT’S THE MATTER?
+
+    <div class="container-group">
+        <h2 style="font-size: 8vw; margin-bottom: 2vh;" class="vanilla-cream">WHAT’S THE MATTER?</h2>
+        
+        <div class="typed-wrap-mobile" style="margin-bottom: 1vh; min-height: 40px;">
+            <span id="typed-mobile" class="typed-text vanilla-cream" style="font-size: 7vw;">ike|</span>
+        </div>
+
+        <img src="images/underline_2_1089x613.png" style="width: 80%; height: auto; position: static;">
     </div>
 
-    <!-- 4. ส่วนของ Typing Animation (จุดที่รหัสจะปรากฏ) -->
-    <!-- ปรับตำแหน่งให้อยู่เหนือเส้น Underline เล็กน้อย -->
-    <div class="typed-wrap-mobile" style="width: 100%; position: absolute; top: 30%; text-align: center; z-index: 10; pointer-events: auto;">
-        <span id="typed-mobile" class="typed-text" style="color: white; font-size: 9vw; font-family: 'Finger Paint'; min-height: 1em; display: inline-block;"></span>
-        <span class="caret mobile" style="color: white; font-size: 9vw; border-left: 3px solid white; margin-left: 5px; animate: blink 1s infinite;"></span>
-    </div>
+    <img src="images/string_1_1239x696.png" style="width: 110%; position: absolute; top: 45%; left: -5%; z-index: 1;">
 
-    <!-- 5. ตัวละคร GIF (อยู่ด้านล่างสุด) -->
-    <img src="images/home.gif" style="width: 140%; height: auto; left: -20%; bottom: 0%; position: absolute; z-index: 1;"/>
+    <img src="images/home.gif" style="width: 120%; position: absolute; bottom: 0; left: -10%; z-index: 2;">
+
+</div>
 
 </div>
 
